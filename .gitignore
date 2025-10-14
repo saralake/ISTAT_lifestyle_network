@@ -1,0 +1,36 @@
+# --- R and RStudio system files ---
+
+# History and workspace files
+.Rhistory
+.RData
+.Ruserdata
+
+# RStudio project files
+.Rproj.user/
+*.Rproj
+
+# Package build and check folders
+.Rcheck/
+
+# Temporary files
+*.Rout
+*.Rout.save
+*.Rout.fail
+*.RDataTmp
+.Rapp.history
+
+# Cache and compiled code
+*_cache/
+cache/
+*.o
+*.so
+*.dll
+
+# --- Data folders to ignore ---
+Original_data/
+Intermediate_data/
+
+# (Optional) ignore hidden system files
+.DS_Store
+Thumbs.db
+
