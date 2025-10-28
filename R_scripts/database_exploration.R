@@ -9,7 +9,7 @@ rm(list=ls())
 # create aggregated vars based on Docs/var_list.xlsx
 
 import_folder = 'Original_data/'
-export_folder = 'Intermediate_data/'
+export_folder = 'Intermediate_data/ver1/'
 
 if(!dir.exists(export_folder)){
   dir.create(export_folder)
@@ -39,7 +39,49 @@ dat = dat[, !names(dat) %in% c('PROFAM', 'PROIND')]
 dat = dat[dat$ETAMi>=7, ]
 
 # RESTRUCTURE SOME VARS:
-# substitute 99 with NAs in numerical variables (99 corresponds to 'don't know') 
+# 99 corresponds to 'don't know'. count how many there are and decide whether to remove these lines or substitute them with NAs so that we can impute them later
+# count how many NAs per column and decide imputation strategy. Nelle variabili tipo "NPROSOM" e simili, imputare con 0 perchè significa "mai"
+# Nelle variabili tipo "NLIBRIM" imputare con 0 che significa 'nessun libro' ecc
+
+res99 = colSums(dat==99, na.rm = T)
+res99[res99>0]
+
+# ISTRMi: titolo di studio: 01	laurea e post-laurea; 07	diploma; 09	licenza di scuola media; 10	licenza di scuola elementare, nessun titolo di studio; 99	non disponibile.
+# POSIZMi: posizione lavorativa. 01	dirigente; autonomo come imprenditore; libero professionista; 02	direttivo, quadro; impiegato; 03	capo operaio, operaio subalterno e assimilati; apprendista; lavorante a domicilio per conto d'impresa; 04	lavoratore in proprio; socio cooperativa Produzione Beni e/o prestazioni di servizio; coadiuvante; collaborazione coordinata e continuativa (con o senza progetto); prestazione d'opera occasionale; 99	non disponibile
+# HHRAD besides having many 99s, also has 40% NAs. remove.   HHTEL contain many 99 vals. Remove these vars
+
+dat$HHRAD = NULL
+dat$HHTEL = NULL
+
+colSums(is.na(dat))
+percentage_NAs = colSums(is.na(dat)) / nrow(dat) * 100
+percentage_NAs[percentage_NAs>30]
+
+NA_vars = names(percentage_NAs[percentage_NAs>30]) 
+impute0 = NA_vars[c(5:length(NA_vars)-1)]
+
+for (i in impute0){
+  dat[[i]][is.na(dat[[i]])] = 0
+}
+
+percentage_NAs = colSums(is.na(dat)) / nrow(dat) * 100
+percentage_NAs[percentage_NAs>30]
+
+# now only AMATR LAVPAS TLAV SODLAV2 have missing values. but they are because not everyone in the sample is married and not everyone in the sample is working.
+
+names(percentage_NAs[percentage_NAs>0 & percentage_NAs<30]) # these are the values to impute with iterative imputer before going on with preprocessing
+
+train_dat <- dat[seq(1, nrow(dat), by = 2), ]  # odd rows
+test_dat  <- dat[seq(2, nrow(dat), by = 2), ]  # even rows
+
+save(dat, file=paste0(export_folder, 'dat_99s_NAs_corrected.RData'))
+save(train_dat, file=paste0(export_folder, 'train_dat_before_imputing.RData'))
+save(test_dat, file=paste0(export_folder, 'test_dat_before_imputing.RData'))
+
+write.csv(dat, file=paste0(export_folder, 'dat_99s_NAs_corrected.csv'), dec = ".", col.names = TRUE, row.names = F)
+write.csv(train_dat, file = paste0(export_folder, 'train_dat_before_imputing.csv'), dec = ".", col.names = TRUE, row.names = F)
+write.csv(test_dat, file = paste0(export_folder, 'test_dat_before_imputing.csv'), dec = ".", col.names = TRUE, row.names = F)
+
 # compute years of marriage (2023 - AMATR)
 # create aggregated vars based on Docs/var_list.xlsx
 
@@ -111,7 +153,6 @@ for (new_var in unique(vars_to_aggr$sost)){
 setdiff(vars_pre_aggr, colnames(dat))
 setdiff(colnames(dat), vars_pre_aggr)
 setdiff(unique(vars_to_aggr$sost), colnames(dat))
-
 
 # get vars distributions
 fig_folder = 'Figures/data_distr/'

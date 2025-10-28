@@ -33,4 +33,4 @@ Intermediate_data/
 # (Optional) ignore hidden system files
 .DS_Store
 Thumbs.db
-
+.ipynb_checkpoints/
