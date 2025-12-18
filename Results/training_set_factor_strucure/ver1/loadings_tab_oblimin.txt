@@ -1,0 +1,66 @@
+                          ML4   ML3   ML2   ML5   ML9  ML8  ML7  ML10  ML1  ML6 ML12 ML11  ML13 dominant_factor
+ORESETSP                                                              1.01                                  ML1
+FREQSPO                                                               0.61                                  ML1
+LETTURA_LIBRI_aggr                                               0.49                                      ML10
+ISTRMi                                                          -0.48                                      ML10
+LETTURA_QUOT_aggr                                                0.43                                      ML10
+SOC_LIFE_STRUTT_aggr                                             0.43                                      ML10
+ATT_CULT_aggr                                                    0.41                                      ML10
+INCSPI                                                            0.3                                      ML10
+VSPESA                                                                                                     ML10
+ARTCUL                                                                                                     ML10
+NLAUDIOM                                                                                                   ML10
+LING                                                                                                       ML10
+INFOR                                                                                                      ML10
+SITEC                                                                                0.81                  ML11
+RISEC                                                                                0.53                  ML11
+AMBIENTE                                                                                                   ML11
+VERD_aggr                                                                       0.73                       ML12
+FRUTTA                                                                          0.57                       ML12
+LEGUMI                                                                                                     ML12
+PARENT                                                                                     0.53            ML13
+VICINI                                                                                     0.51            ML13
+AMICI2                                                                                     0.42            ML13
+AMICI                                                                                     -0.34            ML13
+ETAMi                                0.94                                                                   ML2
+STCIVMi                              0.49                                                                   ML2
+NCOMP                               -0.44                                                                   ML2
+CONDMi                               0.39                                                                   ML2
+CHIES                                                                                                       ML2
+FREQPC12                                                                                                    ML2
+BMI                                                                                                         ML2
+FREQIN12                                                                                                    ML2
+CITTMi                                                                                                      ML2
+FREQSERIE                                                                                                   ML2
+FRFUMO                         0.91                                                                         ML3
+FUMO                          -0.89                                                                         ML3
+NSIGARM                        0.81                                                                         ML3
+SF11                     0.84                                                                               ML4
+SF13                      0.8                                                                               ML4
+SF14                     0.79                                                                               ML4
+SF9                     -0.68                                                                               ML4
+SF15                    -0.56                                                                               ML4
+BFPAS                                      0.84                                                             ML5
+BICFUORIM                                 -0.74                                                             ML5
+ALCOL_abituale_aggr                        0.59                                                             ML5
+ALCOL_unità_giorno_aggr                   -0.45                                                             ML5
+NBICALCM                                  -0.38                                                             ML5
+NINCDOM                                                                    0.85                             ML6
+MNINCDM                                                                    0.82                             ML6
+RELAM                                                      0.82                                             ML7
+RELFAM                                                     0.62                                             ML7
+TEMLIB                                                     0.49                                             ML7
+RED_MEAT_aggr                                         0.74                                                  ML8
+POLLO                                                 0.51                                                  ML8
+UOVA                                                  0.43                                                  ML8
+PESCE                                                 0.37                                                  ML8
+FORM                                                  0.35                                                  ML8
+DOLCI                                                                                                       ML8
+BGAS                                                                                                        ML8
+LATTE                                                                                                       ML8
+PANPAS                                                                                                      ML8
+LIMITA                                          -0.83                                                       ML9
+CRONI                                            0.74                                                       ML9
+SALUTE                                           0.55                                                       ML9
+SALUT                                             0.4      0.31                                             ML9
+ASSIST_SANITARIA                                                                                            ML9

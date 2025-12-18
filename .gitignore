@@ -34,3 +34,7 @@ Intermediate_data/
 .DS_Store
 Thumbs.db
 .ipynb_checkpoints/
+
+# Other 
+.sav
+.pdf

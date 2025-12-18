@@ -1,0 +1,98 @@
+Factor Analysis using method =  ml
+Call: fa(r = train_dat_sel, nfactors = 10, rotate = "none", fm = "ml")
+Standardized loadings (pattern matrix) based upon correlation matrix
+                        item   ML2   ML4   ML3   ML1   ML6   ML8   ML7   ML5  ML10   ML9    h2    u2 com
+ETAMi                      2  0.81 -0.31                                                 0.922 0.078 1.9
+SALUTE                    35  0.50                                                       0.532 0.468 3.6
+STCIVMi                    3  0.49                                                       0.320 0.680 1.7
+CONDMi                     5  0.48                                                       0.315 0.685 1.7
+SALUT                     49  0.40                                0.34                   0.495 0.505 4.8
+NCOMP                      1 -0.37                                                       0.207 0.793 2.1
+BGAS                      28  0.31                                                       0.165 0.835 2.5
+AMICI                     15                                                             0.223 0.777 4.8
+FRUTTA                    25                                                             0.172 0.828 4.0
+FREQPC12                  44                                                             0.108 0.892 2.5
+CHIES                     47                                                             0.097 0.903 3.9
+FREQIN12                  45                                                             0.078 0.922 3.6
+ASSIST_SANITARIA          57                                                             0.074 0.926 4.7
+BMI                       55                                                             0.075 0.925 4.8
+FREQSERIE                 43                                                             0.053 0.947 3.8
+CITTMi                     6                                                             0.023 0.977 4.1
+SF11                      39       -0.71                                                 0.698 0.302 1.9
+SF13                      40       -0.67                                                 0.613 0.387 1.8
+SF14                      41       -0.65                                                 0.625 0.375 2.1
+SF9                       38        0.62                                                 0.511 0.489 1.7
+SF15                      42        0.50                                                 0.413 0.587 2.4
+FUMO                      32  0.37       -0.78                                           0.800 0.200 1.6
+FRFUMO                    33 -0.44        0.75                                           0.820 0.180 1.9
+NSIGARM                   34 -0.39        0.69                                           0.674 0.326 1.8
+ORESETSP                  14                    1.00                                     0.995 0.005 1.0
+FREQSPO                   13                    0.66                                     0.456 0.544 1.1
+LING                       8                                                             0.031 0.969 4.8
+BFPAS                     29  0.34                    0.68                               0.711 0.289 2.2
+BICFUORIM                 30                         -0.57                               0.469 0.531 2.0
+ALCOL_abituale_aggr       60  0.31                    0.57                               0.515 0.485 2.3
+ALCOL_unità_giorno_aggr   61                         -0.44                               0.266 0.734 1.8
+NBICALCM                  31                         -0.30                               0.172 0.828 2.9
+RED_MEAT_aggr             58                                0.55                         0.425 0.575 1.9
+POLLO                     20                                0.44                         0.249 0.751 1.7
+LETTURA_LIBRI_aggr        64                                0.39              0.31       0.301 0.699 2.7
+UOVA                      23                                0.39                         0.258 0.742 2.4
+PESCE                     24                                0.31                         0.205 0.795 3.2
+ATT_CULT_aggr             62                                0.30                         0.342 0.658 5.3
+FORM                      22                                                             0.178 0.822 3.4
+LATTE                     21                                                             0.107 0.893 2.8
+VSPESA                    10                                                             0.118 0.882 4.7
+LEGUMI                    26                                                             0.092 0.908 2.9
+PANPAS                    19                                                             0.068 0.932 3.0
+DOLCI                     27                                                             0.084 0.916 4.4
+ARTCUL                     9                                                             0.051 0.949 3.4
+NLAUDIOM                  46                                                             0.040 0.960 3.1
+RELAM                     51                                      0.49                   0.567 0.433 4.3
+TEMLIB                    52        0.31                          0.39                   0.387 0.613 4.0
+RELFAM                    50                                      0.37                   0.331 0.669 4.1
+SITEC                     48                                                             0.200 0.800 3.8
+VICINI                    18                                                             0.095 0.905 4.3
+RISEC                     56                                                             0.106 0.894 4.9
+PARENT                    16                                                             0.077 0.923 3.8
+AMBIENTE                  53                                                             0.069 0.931 4.1
+AMICI2                    17                                                             0.070 0.930 5.6
+NINCDOM                   11                                            0.82             0.732 0.268 1.2
+MNINCDM                   12                                            0.78             0.658 0.342 1.2
+ISTRMi                     4                               -0.33             -0.34       0.374 0.626 4.3
+LETTURA_QUOT_aggr         63                                                             0.221 0.779 3.9
+SOC_LIFE_STRUTT_aggr      65                                                             0.171 0.829 3.7
+VERD_aggr                 59                                                             0.130 0.870 3.6
+INCSPI                    54                                                             0.079 0.921 3.6
+INFOR                      7                                                             0.010 0.990 5.1
+LIMITA                    37 -0.47                                                  0.50 0.660 0.340 3.6
+CRONI                     36  0.45                                                 -0.47 0.531 0.469 3.0
+
+                       ML2  ML4  ML3  ML1  ML6  ML8  ML7  ML5 ML10  ML9
+SS loadings           3.82 2.98 2.68 2.37 1.87 1.76 1.55 1.43 1.21 0.94
+Proportion Var        0.06 0.05 0.04 0.04 0.03 0.03 0.02 0.02 0.02 0.01
+Cumulative Var        0.06 0.10 0.15 0.18 0.21 0.24 0.26 0.28 0.30 0.32
+Proportion Explained  0.19 0.14 0.13 0.12 0.09 0.09 0.08 0.07 0.06 0.05
+Cumulative Proportion 0.19 0.33 0.46 0.58 0.67 0.75 0.83 0.90 0.95 1.00
+
+Mean item complexity =  3.1
+Test of the hypothesis that 10 factors are sufficient.
+
+df null model =  2080  with the objective function =  16.07 with Chi Square =  269100.2
+df of  the model are 1475  and the objective function was  2.32 
+
+The root mean square of the residuals (RMSR) is  0.03 
+The df corrected root mean square of the residuals is  0.03 
+
+The harmonic n.obs is  16767 with the empirical chi square  48443.13  with prob <  0 
+The total n.obs was  16767  with Likelihood Chi Square =  38903.68  with prob <  0 
+
+Tucker Lewis Index of factoring reliability =  0.802
+RMSEA index =  0.039  and the 90 % confidence intervals are  0.039 0.039
+BIC =  24556.11
+Fit based upon off diagonal values = 0.95
+Measures of factor score adequacy             
+                                                   ML2  ML4  ML3  ML1  ML6  ML8  ML7  ML5 ML10  ML9
+Correlation of (regression) scores with factors   0.97 0.94 0.95 1.00 0.90 0.84 0.86 0.91 0.80 0.82
+Multiple R square of scores with factors          0.94 0.89 0.91 1.00 0.81 0.71 0.74 0.82 0.64 0.68
+Minimum correlation of possible factor scores     0.88 0.79 0.82 0.99 0.62 0.43 0.48 0.64 0.27 0.35
